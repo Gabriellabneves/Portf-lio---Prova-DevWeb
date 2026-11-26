@@ -1,0 +1,555 @@
+/* Cores principais do site */
+:root {
+    --cor-fundo: #10100f;
+    --cor-superficie: #191816;
+    --cor-texto: #f4f0e8;
+    --cor-texto-suave: #b8b1a6;
+    --cor-destaque: #b99762;
+    --cor-borda: #34312c;
+}
+
+/* Remove espaçamentos padrão e facilita o cálculo dos tamanhos */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Deslocamento suave ao navegar pelas seções */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilos gerais da página */
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: "DM Sans", Arial, sans-serif;
+    line-height: 1.7;
+}
+
+/* Fonte dos títulos */
+h1,
+h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    line-height: 1.05;
+}
+
+/* Cabeçalho do site */
+.cabecalho {
+    align-items: center;
+    background-color: rgba(16, 16, 15, 0.96);
+    border-bottom: 1px solid var(--cor-borda);
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Nome da fotógrafa usado como logo */
+.logo {
+    color: var(--cor-texto);
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--cor-destaque);
+}
+
+/* Links do menu */
+.menu {
+    display: flex;
+    gap: 24px;
+}
+
+.menu a {
+    color: var(--cor-texto);
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.menu a:hover {
+    color: var(--cor-destaque);
+}
+
+/* Botão do menu mobile: escondido em telas grandes */
+.botao-menu {
+    background: none;
+    border: 0;
+    color: var(--cor-texto);
+    cursor: pointer;
+    display: none;
+    font-size: 1.8rem;
+}
+
+/* Etiquetas pequenas acima dos títulos */
+.etiqueta {
+    color: var(--cor-destaque);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    margin-bottom: 14px;
+}
+
+/* Capa do site com caramelo.jpg */
+.hero {
+    align-items: center;
+    background:
+        linear-gradient(90deg, rgba(10, 10, 9, 0.84), rgba(10, 10, 9, 0.2)),
+        url("../imagens/caramelo.jpg") center/cover no-repeat;
+    display: flex;
+    min-height: 650px;
+    padding: 90px 12%;
+}
+
+.hero-conteudo {
+    max-width: 760px;
+}
+
+.hero h1 {
+    font-size: clamp(3.2rem, 7vw, 6rem);
+    margin-bottom: 22px;
+}
+
+.hero .etiqueta {
+    color: #d3b47f;
+}
+
+.hero-descricao {
+    color: #e1ddd5;
+    font-size: 1.05rem;
+    margin-bottom: 32px;
+    max-width: 560px;
+}
+
+/* Estilo comum dos botões */
+.botao {
+    display: inline-block;
+    font-size: 0.92rem;
+    font-weight: 600;
+    padding: 13px 22px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Botão bronze */
+.botao-destaque {
+    background-color: var(--cor-destaque);
+    color: #10100f;
+}
+
+.botao-destaque:hover {
+    background-color: #d0b27e;
+}
+
+/* Botão sem preenchimento */
+.botao-contorno {
+    border: 1px solid var(--cor-destaque);
+    color: var(--cor-texto);
+}
+
+.botao-contorno:hover {
+    background-color: var(--cor-destaque);
+    color: #10100f;
+}
+
+/* Espaçamento padrão das seções */
+.secao {
+    padding: 85px 8%;
+}
+
+/* Apresentação da fotógrafa */
+.sobre {
+    align-items: center;
+    display: grid;
+    gap: 60px;
+    grid-template-columns: minmax(260px, 0.8fr) 1.2fr;
+}
+
+/* A foto mantém sua proporção natural: sem corte nem faixas adicionadas */
+.sobre-imagem img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.sobre-texto h2 {
+    font-size: clamp(2.6rem, 5vw, 4rem);
+    margin-bottom: 24px;
+}
+
+.sobre-texto p:not(.etiqueta) {
+    color: var(--cor-texto-suave);
+    margin-bottom: 18px;
+}
+
+.sobre-texto .botao {
+    margin-top: 10px;
+}
+
+/* Apresentação do portfólio */
+.portfolio-intro {
+    background-color: var(--cor-superficie);
+    border-bottom: 1px solid var(--cor-borda);
+    padding: 70px 8% 55px;
+    text-align: center;
+}
+
+.portfolio-intro h2 {
+    font-size: clamp(2.7rem, 5vw, 4rem);
+    margin-bottom: 14px;
+}
+
+.portfolio-intro > p:last-child {
+    color: var(--cor-texto-suave);
+}
+
+/* Texto de apresentação do Projeto Click */
+.projeto-click {
+    background-color: var(--cor-fundo);
+}
+
+.projeto-apresentacao {
+    margin: 0 auto 36px;
+    max-width: 760px;
+    text-align: center;
+}
+
+.projeto-apresentacao h2 {
+    font-size: clamp(2.8rem, 5vw, 4rem);
+    margin-bottom: 8px;
+}
+
+.legenda-projeto {
+    color: var(--cor-destaque);
+    font-weight: 600;
+    margin-bottom: 22px;
+}
+
+.projeto-apresentacao > p:not(.etiqueta, .legenda-projeto) {
+    color: var(--cor-texto-suave);
+    margin: 0 auto 16px;
+    max-width: 700px;
+}
+
+/* Carrossel do Projeto Click */
+.carrossel {
+    margin: 0 auto;
+    max-width: 1050px;
+}
+
+.carrossel-janela {
+    aspect-ratio: 16 / 9;
+    background-color: #080808;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.carrossel-imagens {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+/* Slides sobrepostos: apenas o que tiver a classe ativo aparece */
+.slide-click {
+    inset: 0;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.8s ease;
+    visibility: hidden;
+}
+
+.slide-click.ativo {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* A proporção do carrossel é ajustada pelo JavaScript à proporção da foto */
+.slide-click img {
+    cursor: zoom-in;
+    display: block;
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+}
+
+/* Setas do carrossel */
+.controle-carrossel {
+    background-color: rgba(16, 16, 15, 0.78);
+    border: 1px solid rgba(244, 240, 232, 0.45);
+    color: var(--cor-texto);
+    cursor: pointer;
+    font-size: 1.2rem;
+    height: 44px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.2s ease;
+    width: 44px;
+    z-index: 2;
+}
+
+.controle-carrossel:hover {
+    background-color: var(--cor-destaque);
+    color: #10100f;
+}
+
+.controle-carrossel.anterior {
+    left: 16px;
+}
+
+.controle-carrossel.proximo {
+    right: 16px;
+}
+
+.contador-carrossel {
+    color: var(--cor-texto-suave);
+    font-size: 0.9rem;
+    margin-top: 14px;
+    text-align: center;
+}
+
+/* Seções de fotografias */
+.album {
+    background-color: var(--cor-fundo);
+}
+
+.album-escuro {
+    background-color: var(--cor-superficie);
+}
+
+.titulo-album {
+    margin: 0 auto 30px;
+    max-width: 900px;
+    text-align: center;
+}
+
+.titulo-album h2 {
+    font-size: clamp(2.5rem, 5vw, 3.7rem);
+}
+
+/* Organiza as fotos em colunas, como em uma galeria editorial */
+.galeria {
+    column-count: 3;
+    column-gap: 16px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Evita que uma foto seja dividida entre duas colunas */
+.foto-item {
+    align-self: start;
+    background: transparent;
+    border: 0;
+    break-inside: avoid;
+    cursor: zoom-in;
+    display: inline-block;
+    margin: 0 0 16px;
+    overflow: hidden;
+    padding: 0;
+    vertical-align: top;
+    width: 100%;
+}
+
+/* Mantém a proporção original de cada fotografia */
+.foto-item img {
+    display: block;
+    height: auto;
+    transition: transform 0.35s ease;
+    width: 100%;
+}
+
+.foto-item:hover img {
+    transform: scale(1.02);
+}
+
+
+/* Seção de contato */
+.contato {
+    background-color: var(--cor-superficie);
+    border-top: 1px solid var(--cor-borda);
+    padding: 85px 8%;
+    text-align: center;
+}
+
+.contato h2 {
+    font-size: clamp(2.7rem, 5vw, 4rem);
+    margin: 0 auto 16px;
+    max-width: 700px;
+}
+
+.contato > p:not(.etiqueta) {
+    color: var(--cor-texto-suave);
+    margin: 0 auto 26px;
+    max-width: 560px;
+}
+
+/* Rodapé */
+.rodape {
+    align-items: center;
+    border-top: 1px solid var(--cor-borda);
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 8%;
+}
+
+.rodape p,
+.rodape a {
+    color: var(--cor-texto-suave);
+    font-size: 0.88rem;
+}
+
+.rodape a {
+    text-decoration: none;
+}
+
+.rodape a:hover {
+    color: var(--cor-destaque);
+}
+
+/* Janela para ampliar uma fotografia */
+.visualizador {
+    background-color: #171614;
+    border: 1px solid var(--cor-borda);
+    margin: auto;
+    max-height: 90vh;
+    max-width: 90vw;
+    padding: 12px;
+    position: relative;
+}
+
+.visualizador::backdrop {
+    background: rgba(0, 0, 0, 0.88);
+}
+
+.visualizador img {
+    display: block;
+    height: auto;
+    max-height: 82vh;
+    max-width: 85vw;
+    width: auto;
+}
+
+.fechar-visualizador {
+    background-color: var(--cor-texto);
+    border: 0;
+    border-radius: 50%;
+    color: #10100f;
+    cursor: pointer;
+    font-size: 1.5rem;
+    height: 36px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 36px;
+    z-index: 2;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 760px) {
+    .cabecalho {
+        padding: 15px 6%;
+    }
+
+    /* Mostra o botão do menu em celular e tablet */
+    .botao-menu {
+        display: block;
+    }
+
+    /* Menu recolhido: o JavaScript adiciona a classe aberto */
+    .menu {
+        background-color: var(--cor-fundo);
+        border-bottom: 1px solid var(--cor-borda);
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        left: 0;
+        padding: 12px 6% 20px;
+        position: absolute;
+        right: 0;
+        top: 100%;
+    }
+
+    .menu.aberto {
+        display: flex;
+    }
+
+    .menu a {
+        padding: 10px 0;
+    }
+
+    .hero {
+        min-height: 560px;
+        padding: 70px 7%;
+    }
+
+    .hero h1 {
+        font-size: clamp(3rem, 12vw, 4.5rem);
+    }
+
+    .secao {
+        padding: 65px 7%;
+    }
+
+    .sobre {
+        gap: 34px;
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-imagem {
+        max-width: 500px;
+    }
+
+    .portfolio-intro {
+        padding: 60px 7% 45px;
+    }
+
+    .galeria {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contato {
+        padding: 65px 7%;
+    }
+
+    .rodape {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+        padding: 22px 7%;
+    }
+}
+
+
+
+/* Respeita a preferência por menos animações */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Em telas menores, usa duas colunas */
+@media (max-width: 760px) {
+    .galeria {
+        column-count: 2;
+    }
+}
+
+/* Em celulares estreitos, mostra uma foto por coluna */
+@media (max-width: 480px) {
+    .galeria {
+        column-count: 1;
+    }
+}

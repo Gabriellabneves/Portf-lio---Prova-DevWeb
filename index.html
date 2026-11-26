@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Faz o site se adaptar a celulares e tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Descrição do portfólio -->
+    <meta
+        name="description"
+        content="Portfólio de Gabriella Barbosa: fotojornalismo, fotografia de rua, moda e ensaios."
+    >
+
+    <title>Gabriella Barbosa | Fotografia</title>
+
+    <!-- Fontes usadas nos títulos e nos textos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Arquivo de estilos CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Cabeçalho com o nome e o menu do site -->
+    <header class="cabecalho">
+        <a class="logo" href="#inicio">
+            Gabriella Barbosa<span>.</span>
+        </a>
+
+        <!-- Botão que abre o menu em telas pequenas -->
+        <button
+            class="botao-menu"
+            id="botao-menu"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="menu-principal"
+        >
+            ☰
+        </button>
+
+        <nav class="menu" id="menu-principal">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#portfolio">Portfólio</a>
+            <a href="#projeto-click">Projeto Click</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Abertura do site: a imagem de fundo é caramelo.jpg -->
+        <section class="hero" id="inicio">
+            <div class="hero-conteudo">
+                <p class="etiqueta">FOTOJORNALISMO • RUA • MODA • ENSAIOS</p>
+
+                <h1>Não procuro o óbvio. Procuro o que provoca.</h1>
+
+                <p class="hero-descricao">
+                    Fotografia documental, de rua, moda e ensaios autorais.
+                    Espontaneidade, pessoas, luz e linhas — com um olhar
+                    atento ao que foge do esperado.
+                </p>
+
+                <a class="botao botao-destaque" href="#portfolio">
+                    Conheça meu trabalho
+                </a>
+            </div>
+        </section>
+
+        <!-- Apresentação pessoal e história da fotógrafa -->
+        <section class="secao sobre" id="sobre">
+            <div class="sobre-imagem">
+                <!-- Foto vertical escolhida para a seção Sobre -->
+                <img
+                    src="imagens/atl1V.jpg"
+                    alt="ATL 2024"
+                >
+            </div>
+
+            <div class="sobre-texto">
+                <p class="etiqueta">SOBRE MIM</p>
+
+                <h2>Minha história começou com uma câmera em casa.</h2>
+
+                <p>
+                    Minha tia, que me criou, sempre teve uma câmera fotográfica
+                    e uma filmadora. Na infância, ela deixava eu e meus irmãos
+                    explorar os equipamentos. Na adolescência, comecei a
+                    fotografar muito o meu irmão — e fui percebendo que tinha
+                    um olhar que queria desenvolver.
+                </p>
+
+                <p>
+                    No terceiro ano do ensino médio, uma professora de artes
+                    pediu que apresentássemos um lado artístico nosso. Mostrei
+                    minhas fotografias, e ela me incentivou a procurar um curso.
+                    Naquela mesma semana, um instituto da minha cidade abriu
+                    uma oficina gratuita de fotografia com duração de seis meses.
+                </p>
+
+                <p>
+                    Inscrevi-me e me destaquei no curso. Meu professor se tornou
+                    amigo e, depois, colega de trabalho: demos aulas de fotografia
+                    juntos no mesmo instituto.
+                </p>
+
+                <p>
+                    Hoje, me atraem o fotojornalismo, a fotografia de rua e a
+                    moda. Gosto da espontaneidade e da aleatoriedade da rua,
+                    de composições visualmente complexas e de imagens que
+                    provocam. Na moda, me encanta o lado inventivo e provocador —
+                    como no universo de <em>Cruella</em>.
+                </p>
+
+                <a class="botao botao-contorno" href="#contato">
+                    Vamos conversar
+                </a>
+            </div>
+        </section>
+
+        <!-- Introdução às galerias -->
+        <section class="portfolio-intro" id="portfolio">
+            <p class="etiqueta">PORTFÓLIO</p>
+
+            <h2>Um olhar para o que escapa do óbvio.</h2>
+
+            <p>
+                Fotojornalismo, rua, moda e outros encontros com a imagem.
+            </p>
+        </section>
+
+        <!-- Seção especial do Projeto Click, com carrossel -->
+        <section class="secao projeto-click" id="projeto-click">
+            <div class="projeto-apresentacao">
+                <p class="etiqueta">PROJETO EM DESTAQUE</p>
+
+                <h2>Projeto Click</h2>
+
+                <p class="legenda-projeto">Brazlândia 2024</p>
+
+                <p>
+                    Esta série foi criada para o edital Projeto Click, da
+                    Co.liga com o Instituto BRB, a partir do tema
+                    “Arquitetura, Cerrado e Humanidade”.
+                </p>
+
+                <p>
+                    As pessoas fotografadas são minha mãe, meu padrasto e
+                    minha irmã. O projeto foi premiado e recebeu nota máxima
+                    em todos os critérios avaliados pelos curadores.
+                </p>
+            </div>
+
+            <!-- O JavaScript carrega as 11 imagens e controla a transição -->
+            <div class="carrossel" id="carrossel-click">
+                <div class="carrossel-janela" id="carrossel-janela">
+                    <div class="carrossel-imagens" id="carrossel-imagens">
+                        <!-- Os slides são criados pelo JavaScript -->
+                    </div>
+
+                    <button
+                        class="controle-carrossel anterior"
+                        id="click-anterior"
+                        type="button"
+                        aria-label="Mostrar fotografia anterior"
+                    >
+                        &#10094;
+                    </button>
+
+                    <button
+                        class="controle-carrossel proximo"
+                        id="click-proximo"
+                        type="button"
+                        aria-label="Mostrar próxima fotografia"
+                    >
+                        &#10095;
+                    </button>
+                </div>
+
+                <p class="contador-carrossel" id="contador-click">1 / 11</p>
+            </div>
+        </section>
+
+        <!-- As imagens de cada galeria serão carregadas pelo JavaScript -->
+        <section class="secao album" id="atl">
+            <div class="titulo-album">
+                <p class="etiqueta">SÉRIE</p>
+                <h2>ATL 2024</h2>
+            </div>
+
+            <div class="galeria" id="galeria-atl"></div>
+        </section>
+
+        <section class="secao album album-escuro" id="slanvy">
+            <div class="titulo-album">
+                <p class="etiqueta">SÉRIE</p>
+                <h2>Slanvy 2023</h2>
+            </div>
+
+            <div class="galeria" id="galeria-slanvy"></div>
+        </section>
+
+        <section class="secao album" id="santa-luzia">
+            <div class="titulo-album">
+                <p class="etiqueta">SÉRIE</p>
+                <h2>Santa Luzia/Estrutural 2023</h2>
+            </div>
+
+            <div class="galeria" id="galeria-santa"></div>
+        </section>
+
+        <section class="secao album album-escuro" id="camara">
+            <div class="titulo-album">
+                <p class="etiqueta">SÉRIE</p>
+                <h2>Câmara dos Deputados 2024</h2>
+            </div>
+
+            <div class="galeria" id="galeria-camara"></div>
+        </section>
+
+        <section class="secao album" id="batalha">
+            <div class="titulo-album">
+                <p class="etiqueta">SÉRIE</p>
+                <h2>Batalha da Estrutural 2023</h2>
+            </div>
+
+            <div class="galeria" id="galeria-batalha"></div>
+        </section>
+
+        <!-- Contato profissional -->
+        <section class="contato" id="contato">
+            <p class="etiqueta">PROJETOS E COLABORAÇÕES</p>
+
+            <h2>Vamos conversar?</h2>
+
+            <p>
+                Para conversar sobre trabalhos, projetos ou colaborações,
+                entre em contato por e-mail.
+            </p>
+
+            <!-- Abre o aplicativo de e-mail com seu endereço -->
+            <a
+                class="botao botao-destaque"
+                href="mailto:gabriellabarbosaneves@gmail.com"
+            >
+                gabriellabarbosaneves@gmail.com
+            </a>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <p>
+            © <span id="ano-atual"></span> Gabriella Barbosa | Fotografia
+        </p>
+
+        <a href="#inicio">Voltar ao início ↑</a>
+    </footer>
+
+    <!-- Janela para ver uma fotografia em tamanho maior -->
+    <dialog class="visualizador" id="visualizador">
+        <button
+            class="fechar-visualizador"
+            id="fechar-visualizador"
+            type="button"
+            aria-label="Fechar fotografia"
+        >
+            ×
+        </button>
+
+        <img id="imagem-ampliada" src="" alt="">
+    </dialog>
+
+    <!-- Arquivo JavaScript -->
+    <script src="js/script.js" defer></script>
+</body>
+</html>
